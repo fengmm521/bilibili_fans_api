@@ -9,8 +9,11 @@ import os,sys
 from magetool import urltool
 import json
 
-fansUrl = 'https://api.bilibili.com/x/relation/stat?vmid=166287840&jsonp=jsonp'
-viewsUrl = 'https://api.bilibili.com/x/space/upstat?mid=166287840&jsonp=jsonp'
+
+bilibiliID = 166287840
+
+fansUrl = 'https://api.bilibili.com/x/relation/stat?vmid=%d&jsonp=jsonp'%(bilibiliID)
+viewsUrl = 'https://api.bilibili.com/x/space/upstat?mid=%d&jsonp=jsonp'%(bilibiliID)
 
 def sayMsg(fans,views):
     cmd = '/usr/bin/say 粉丝数:%d,播放数:%d'%(fans,views)
